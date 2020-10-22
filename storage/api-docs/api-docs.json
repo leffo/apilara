@@ -33,7 +33,7 @@
                         "content": {
                             "application/json": {
                                 "schema": {
-                                    "$ref": "#/components/schemas/ProjectResource"
+                                    "$ref": "#/components/schemas/ProductResource"
                                 }
                             }
                         }
@@ -58,7 +58,7 @@
                     "content": {
                         "application/json": {
                             "schema": {
-                                "$ref": "#/components/schemas/StoreProjectRequest"
+                                "$ref": "#/components/schemas/StoreProductRequest"
                             }
                         }
                     }
@@ -69,7 +69,7 @@
                         "content": {
                             "application/json": {
                                 "schema": {
-                                    "$ref": "#/components/schemas/Project"
+                                    "$ref": "#/components/schemas/Product"
                                 }
                             }
                         }
@@ -111,7 +111,7 @@
                         "content": {
                             "application/json": {
                                 "schema": {
-                                    "$ref": "#/components/schemas/Project"
+                                    "$ref": "#/components/schemas/Product"
                                 }
                             }
                         }
@@ -145,16 +145,13 @@
                         }
                     }
                 ],
-                "requestBody": {
-                    "required": true
-                },
                 "responses": {
                     "202": {
                         "description": "Product updated successfully",
                         "content": {
                             "application/json": {
                                 "schema": {
-                                    "$ref": "#/components/schemas/Project"
+                                    "$ref": "#/components/schemas/Product"
                                 }
                             }
                         }
@@ -179,7 +176,7 @@
                 ],
                 "summary": "Remove the specified resource from storage",
                 "description": "Deletes a record and returns no content",
-                "operationId": "deleteProject",
+                "operationId": "deleteProduct",
                 "parameters": [
                     {
                         "name": "id",
@@ -215,28 +212,28 @@
     },
     "components": {
         "schemas": {
-            "Project": {
-                "title": "Project",
-                "description": "Project model",
+            "Product": {
+                "title": "Product",
+                "description": "Product model",
                 "properties": {
                     "id": {
                         "title": "ID",
                         "description": "ID",
                         "type": "integer",
                         "format": "int64",
-                        "example": 1
+                        "example": 3
                     },
                     "name": {
                         "title": "Name",
-                        "description": "Name of the new project",
+                        "description": "Name of the new product",
                         "type": "string",
-                        "example": "A nice project"
+                        "example": "PHP Course"
                     },
-                    "description": {
-                        "title": "Description",
-                        "description": "Description of the new project",
+                    "detail": {
+                        "title": "Detailisation",
+                        "description": "Detailisation of the product",
                         "type": "string",
-                        "example": "This is new project's description"
+                        "example": "For middle users only!"
                     },
                     "created_at": {
                         "title": "Created at",
@@ -251,74 +248,49 @@
                         "type": "string",
                         "format": "datetime",
                         "example": "2020-01-27 17:50:45"
-                    },
-                    "deleted_at": {
-                        "title": "Deleted at",
-                        "description": "Deleted at",
-                        "type": "string",
-                        "format": "datetime",
-                        "example": "2020-01-27 17:50:45"
-                    },
-                    "author_id": {
-                        "title": "Author ID",
-                        "description": "Author's id of the new project",
-                        "type": "integer",
-                        "format": "int64",
-                        "example": 1
-                    },
-                    "author": {
-                        "title": "Author",
-                        "description": "Project author's user model"
                     }
                 },
                 "type": "object",
                 "xml": {
-                    "name": "Project"
+                    "name": "Product"
                 }
             },
-            "ProjectResource": {
-                "title": "ProjectResource",
-                "description": "Project resource",
+            "ProductResource": {
+                "title": "ProductResource",
+                "description": "Product resource",
                 "properties": {
                     "data": {
                         "title": "Data",
                         "description": "Data wrapper",
                         "type": "array",
                         "items": {
-                            "$ref": "#/components/schemas/Project"
+                            "$ref": "#/components/schemas/Product"
                         }
                     }
                 },
                 "type": "object",
                 "xml": {
-                    "name": "ProjectResource"
+                    "name": "ProductResource"
                 }
             },
-            "StoreProjectRequest": {
-                "title": "Store Project request",
-                "description": "Store Project request body data",
+            "StoreProductRequest": {
+                "title": "Store Product request",
+                "description": "Store Product request body data",
                 "required": [
                     "name"
                 ],
                 "properties": {
                     "name": {
                         "title": "name",
-                        "description": "Name of the new project",
+                        "description": "Name of the product",
                         "type": "string",
-                        "example": "A nice project"
+                        "example": "JavaScript Course"
                     },
-                    "description": {
-                        "title": "description",
-                        "description": "Description of the new project",
+                    "detail": {
+                        "title": "Detail",
+                        "description": "Description of the product",
                         "type": "string",
-                        "example": "This is new project's description"
-                    },
-                    "author_id": {
-                        "title": "author_id",
-                        "description": "Author's id of the new project",
-                        "type": "integer",
-                        "format": "int64",
-                        "example": 1
+                        "example": "Helpers for PHP developer"
                     }
                 },
                 "type": "object"
@@ -330,8 +302,5 @@
             "name": "hw16",
             "description": "API Endpoints of Projects"
         }
-    ],
-    "security": [
-        []
     ]
 }
