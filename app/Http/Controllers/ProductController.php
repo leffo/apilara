@@ -159,8 +159,7 @@ class ProductController extends BaseController
      *          )
      *      ),
      *      @OA\RequestBody(
-     *          required=true,
-     *          @OA\JsonContent(ref="#/components/schemas/UpdateProjectRequest")
+     *          required=true
      *      ),
      *      @OA\Response(
      *          response=202,
