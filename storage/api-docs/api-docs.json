@@ -230,8 +230,8 @@
                         "example": "PHP Course"
                     },
                     "detail": {
-                        "title": "Detailisation",
-                        "description": "Detailisation of the product",
+                        "title": "Detail",
+                        "description": "Detail of the product",
                         "type": "string",
                         "example": "For middle users only!"
                     },
