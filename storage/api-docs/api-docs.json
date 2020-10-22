@@ -190,7 +190,7 @@
                 ],
                 "responses": {
                     "204": {
-                        "description": "Product deleted successfullyn",
+                        "description": "Product deleted successfully",
                         "content": {
                             "application/json": {
                                 "schema": {}
