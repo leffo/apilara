@@ -6,14 +6,14 @@ namespace App\Virtual\Resources;
 
 /**
  * @OA\Schema(
- *     title="ProjectResource",
- *     description="Project resource",
+ *     title="ProductResource",
+ *     description="Product resource",
  *     @OA\Xml(
- *         name="ProjectResource"
+ *         name="ProductResource"
  *     )
  * )
  */
-class ProjectResource
+class ProductResource
 {
     /**
      * @OA\Property(
@@ -21,7 +21,7 @@ class ProjectResource
      *     description="Data wrapper"
      * )
      *
-     * @var \App\Virtual\Models\Project[]
+     * @var \App\Virtual\Models\Product[]
      */
     private $data;
 }

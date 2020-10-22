@@ -23,7 +23,7 @@ class ProductController extends BaseController
      *      @OA\Response(
      *          response=200,
      *          description="Products retrieved successfully",
-     *          @OA\JsonContent(ref="#/components/schemas/ProjectResource")
+     *          @OA\JsonContent(ref="#/components/schemas/ProductResource")
      *       ),
      *      @OA\Response(
      *          response=401,
@@ -53,12 +53,12 @@ class ProductController extends BaseController
      *      description="Returns resource data",
      *      @OA\RequestBody(
      *          required=true,
-     *          @OA\JsonContent(ref="#/components/schemas/StoreProjectRequest")
+     *          @OA\JsonContent(ref="#/components/schemas/StoreProductRequest")
      *      ),
      *      @OA\Response(
      *          response=201,
      *          description="Product created successfully",
-     *          @OA\JsonContent(ref="#/components/schemas/Project")
+     *          @OA\JsonContent(ref="#/components/schemas/Product")
      *       ),
      *      @OA\Response(
      *          response=400,
@@ -112,7 +112,7 @@ class ProductController extends BaseController
      *      @OA\Response(
      *          response=200,
      *          description="Successful operation",
-     *          @OA\JsonContent(ref="#/components/schemas/Project")
+     *          @OA\JsonContent(ref="#/components/schemas/Product")
      *       ),
      *      @OA\Response(
      *          response=400,
@@ -164,7 +164,7 @@ class ProductController extends BaseController
      *      @OA\Response(
      *          response=202,
      *          description="Product updated successfully",
-     *          @OA\JsonContent(ref="#/components/schemas/Project")
+     *          @OA\JsonContent(ref="#/components/schemas/Product")
      *       ),
      *      @OA\Response(
      *          response=400,
@@ -209,7 +209,7 @@ class ProductController extends BaseController
     /**
      * @OA\Delete(
      *      path="/products/{id}",
-     *      operationId="deleteProject",
+     *      operationId="deleteProduct",
      *      tags={"hw16"},
      *      summary="Remove the specified resource from storage",
      *      description="Deletes a record and returns no content",
